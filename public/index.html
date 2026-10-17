@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kushal Tiwari | Playable Game Portfolio & Resume</title>
+  <meta name="description" content="Explore the gamified interactive portfolio and curriculum vitae of Kushal Tiwari - Full-Stack Developer & AI Solutions Engineer.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts for Retro Pixel & Modern Tech -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Press+Start+2P&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 overflow-hidden font-sans select-none">
+
+  <!-- TOP HUD BAR -->
+  <header class="fixed top-0 left-0 right-0 z-30 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 px-3 py-2 flex flex-wrap items-center justify-between gap-2 shadow-xl no-print">
+    <!-- Player Profile Info -->
+    <div class="flex items-center gap-3">
+      <div class="relative">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-lg font-bold shadow-md shadow-sky-500/30">
+          KT
+        </div>
+        <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-slate-950 text-[10px] font-extrabold px-1.5 py-0.2 rounded-full border border-slate-900">22</span>
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="text-sm font-bold text-white tracking-wide">Kushal Tiwari</h1>
+          <span class="px-2 py-0.5 text-[10px] bg-sky-500/20 text-sky-400 border border-sky-500/40 rounded-full font-mono">B.Tech CSE @ NIT Manipur</span>
+        </div>
+        <p class="text-[11px] text-slate-400">Full-Stack Web Dev & AI Engineer • NIT Manipur</p>
+      </div>
+    </div>
+
+    <!-- Fast Travel Quick Navigation -->
+    <nav class="hidden lg:flex items-center gap-1.5 bg-slate-950/70 p-1 rounded-xl border border-slate-800 text-xs">
+      <button id="btn-nav-spawn" class="px-2.5 py-1 text-white bg-slate-800 rounded-lg transition flex items-center gap-1">
+        <span>🏰</span> Spawn
+      </button>
+      <button id="btn-nav-skills" class="px-2.5 py-1 text-slate-500 opacity-50 cursor-not-allowed rounded-lg transition flex items-center gap-1" title="Locked: Complete Round 1">
+        <span>⚡</span> Skills <span class="text-[9px] lock-icon">🔒</span>
+      </button>
+      <button id="btn-nav-exp" class="px-2.5 py-1 text-slate-500 opacity-50 cursor-not-allowed rounded-lg transition flex items-center gap-1" title="Locked: Complete Round 2">
+        <span>💼</span> Experience <span class="text-[9px] lock-icon">🔒</span>
+      </button>
+      <button id="btn-nav-projects" class="px-2.5 py-1 text-slate-500 opacity-50 cursor-not-allowed rounded-lg transition flex items-center gap-1" title="Locked: Complete Round 3">
+        <span>🚀</span> Projects <span class="text-[9px] lock-icon">🔒</span>
+      </button>
+      <button id="btn-nav-arcade" class="px-2.5 py-1 text-slate-500 opacity-50 cursor-not-allowed rounded-lg transition flex items-center gap-1" title="Locked: Complete Round 3">
+        <span>👾</span> Mini-Game <span class="text-[9px] lock-icon">🔒</span>
+      </button>
+      <button id="btn-nav-trophies" class="px-2.5 py-1 text-slate-500 opacity-50 cursor-not-allowed rounded-lg transition flex items-center gap-1" title="Locked: Complete Round 4">
+        <span>🏆</span> Trophies <span class="text-[9px] lock-icon">🔒</span>
+      </button>
+      <button id="btn-nav-contact" class="px-2.5 py-1 text-slate-500 opacity-50 cursor-not-allowed rounded-lg transition flex items-center gap-1" title="Locked: Complete Round 5">
+        <span>📡</span> Contact <span class="text-[9px] lock-icon">🔒</span>
+      </button>
+    </nav>
+
+    <!-- Controls & Action Tools -->
+    <div class="flex items-center gap-2 text-xs">
+      <!-- Classic Resume Button (Print / ATS View) -->
+      <button id="btn-toggle-resume" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-bold shadow-md shadow-indigo-600/30 transition flex items-center gap-1.5">
+        <span>📄</span> <span class="hidden sm:inline">Classic Resume / PDF</span><span class="sm:hidden">Resume</span>
+      </button>
+
+      <!-- BGM Toggle -->
+      <button id="btn-toggle-bgm" class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 transition">
+        🎶 8-Bit BGM
+      </button>
+
+      <!-- Sound FX Toggle -->
+      <button id="btn-toggle-sound" class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-emerald-400 rounded-lg border border-slate-700 transition">
+        🔊 Sound FX
+      </button>
+
+      <!-- Quest Toggle -->
+      <button id="quest-toggle-btn" class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-amber-400 rounded-lg border border-slate-700 transition flex items-center gap-1">
+        <span>📜</span> <span class="hidden sm:inline">Quests</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- GAME CANVAS VIEWPORT -->
+  <main class="w-screen h-screen relative overflow-hidden">
+    <canvas id="game-canvas" class="block w-full h-full cursor-grab active:cursor-grabbing"></canvas>
+
+    <!-- ACTIVE ROUND PROGRESSION BANNER -->
+    <div id="round-banner" class="fixed top-14 left-4 z-20 bg-slate-900/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-sky-500/40 shadow-xl flex items-center gap-3 no-print max-w-[calc(100vw-2rem)] sm:max-w-md animate-in">
+      <div id="round-badge" class="w-10 h-10 rounded-lg bg-sky-500/20 text-sky-400 border border-sky-500/40 flex items-center justify-center font-bold text-xs font-mono shrink-0 shadow-md">
+        R1
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center justify-between gap-2">
+          <h3 id="round-title" class="text-xs font-extrabold text-white tracking-wide truncate">ROUND 1: ACADEMIC CITADEL</h3>
+          <span id="round-step-counter" class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full font-mono font-bold shrink-0">0/2</span>
+        </div>
+        <p id="round-task-desc" class="text-[11px] text-sky-300 truncate">Talk to Guide Master & Examine Academic Monument</p>
+      </div>
+    </div>
+
+    <!-- FLOATING GATE WARNING TOAST -->
+    <div id="gate-toast" class="fixed top-28 left-1/2 -translate-x-1/2 z-40 bg-rose-950/95 border-2 border-rose-500 text-rose-200 px-4 py-2.5 rounded-xl shadow-2xl text-xs font-bold flex items-center gap-2 hidden transition-all duration-300">
+      <span class="text-base">🔒</span>
+      <span id="gate-toast-msg">GATE LOCKED! Complete Round 1 first to enter Zone 2!</span>
+    </div>
+
+    <!-- ROUND CLEARED CELEBRATION MODAL OVERLAY -->
+    <div id="round-clear-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+      <div class="bg-slate-950 border-2 border-amber-500/60 rounded-2xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl animate-in relative">
+        <div class="text-5xl animate-bounce">🌟</div>
+        <span id="round-clear-tag" class="px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-mono font-bold rounded-full">ROUND 1 CLEARED!</span>
+        <h2 id="round-clear-title" class="text-xl font-extrabold text-white">Zone 2 Unlocked!</h2>
+        <p id="round-clear-desc" class="text-sm text-slate-300 leading-relaxed">The energy barrier across the eastern highway has dissipated. You can now explore Zone 2: Tech Sanctum & Skill Forge!</p>
+        <button id="btn-round-continue" class="w-full py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold rounded-xl shadow-lg shadow-amber-500/30 transition text-sm">
+          Continue Adventure ➔
+        </button>
+      </div>
+    </div>
+
+    <!-- KEYBOARD CONTROLS HELP ON DESKTOP -->
+    <div class="hidden md:flex fixed bottom-4 left-4 z-20 bg-slate-900/90 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-slate-800 text-[11px] text-slate-300 items-center gap-3 shadow-lg pointer-events-none">
+      <div class="flex items-center gap-1">
+        <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-sky-400 font-mono">W</kbd>
+        <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-sky-400 font-mono">A</kbd>
+        <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-sky-400 font-mono">S</kbd>
+        <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-sky-400 font-mono">D</kbd>
+        <span class="ml-1 text-slate-400">or Arrows to Walk</span>
+      </div>
+      <div class="h-4 w-px bg-slate-700"></div>
+      <div class="flex items-center gap-1">
+        <kbd class="px-2 py-0.5 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded font-mono font-bold">E</kbd>
+        <span class="text-slate-400">or Space to Interact</span>
+      </div>
+    </div>
+
+    <!-- MOBILE ON-SCREEN CONTROLS -->
+    <div class="md:hidden fixed bottom-6 left-6 z-20 flex flex-col items-center">
+      <button id="ctrl-up" class="w-12 h-12 bg-slate-900/80 active:bg-sky-600 border border-slate-700 rounded-t-xl text-white flex items-center justify-center text-lg shadow-lg touch-none">▲</button>
+      <div class="flex">
+        <button id="ctrl-left" class="w-12 h-12 bg-slate-900/80 active:bg-sky-600 border border-slate-700 rounded-l-xl text-white flex items-center justify-center text-lg shadow-lg touch-none">◀</button>
+        <div class="w-12 h-12 bg-slate-950/80 flex items-center justify-center text-slate-600 text-xs">🕹️</div>
+        <button id="ctrl-right" class="w-12 h-12 bg-slate-900/80 active:bg-sky-600 border border-slate-700 rounded-r-xl text-white flex items-center justify-center text-lg shadow-lg touch-none">▶</button>
+      </div>
+      <button id="ctrl-down" class="w-12 h-12 bg-slate-900/80 active:bg-sky-600 border border-slate-700 rounded-b-xl text-white flex items-center justify-center text-lg shadow-lg touch-none">▼</button>
+    </div>
+
+    <div class="md:hidden fixed bottom-8 right-6 z-20">
+      <button id="ctrl-action" class="w-16 h-16 bg-amber-500 active:bg-amber-600 text-slate-950 font-extrabold rounded-2xl shadow-xl flex flex-col items-center justify-center text-sm opacity-40 transition border-2 border-amber-300 touch-none">
+        <span class="text-lg">⚡</span>
+        <span>ACTION</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- QUEST LOG DRAWER -->
+  <aside id="quest-drawer" class="fixed top-14 right-4 z-20 w-80 max-w-[calc(100vw-2rem)] bg-slate-900/95 backdrop-blur-xl border border-slate-800 rounded-2xl p-4 shadow-2xl transition-all duration-300 space-y-3 no-print">
+    <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-400">📜</span>
+        <h3 class="text-xs font-bold text-white uppercase tracking-wider">Active Quests</h3>
+      </div>
+      <span id="quest-percent" class="text-xs font-mono font-bold text-emerald-400">14%</span>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+      <div id="quest-progress-bar" class="bg-gradient-to-r from-amber-400 to-emerald-400 h-full w-[14%] transition-all duration-500"></div>
+    </div>
+
+    <div id="quest-list" class="space-y-1.5 max-h-56 overflow-y-auto">
+      <!-- Populated dynamically by app.js -->
+    </div>
+
+    <div class="pt-2 border-t border-slate-800 flex justify-between items-center text-[10px] text-slate-400">
+      <span>Visitors: <strong id="stat-visitors" class="text-sky-400">42</strong></span>
+      <span>NIT Manipur 2027</span>
+    </div>
+  </aside>
+
+  <!-- INTERACTIVE MODAL OVERLAY -->
+  <div id="modal-overlay" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 hidden">
+    <div class="bg-slate-950 border border-slate-800 rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden relative animate-in">
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-4 border-b border-slate-800 bg-slate-900/70">
+        <div class="flex items-center gap-2.5">
+          <span id="modal-badge" class="px-2 py-0.5 text-[10px] font-mono font-bold rounded bg-sky-500/20 text-sky-400 border border-sky-500/30">INFO</span>
+          <h2 id="modal-title" class="text-base sm:text-lg font-bold text-white truncate max-w-[280px] sm:max-w-md">Item Details</h2>
+        </div>
+        <button id="modal-close-btn" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div id="modal-content" class="p-4 sm:p-6 overflow-y-auto max-h-[calc(90vh-70px)] space-y-4">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="game/audio.js"></script>
+  <script src="game/entities.js"></script>
+  <script src="game/map.js"></script>
+  <script src="game/arcade.js"></script>
+  <script src="game/engine.js"></script>
+  <script src="js/resumeModal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

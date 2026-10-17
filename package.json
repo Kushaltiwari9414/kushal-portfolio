@@ -1,0 +1,25 @@
+{
+  "name": "kushal-tiwari-game-portfolio",
+  "version": "1.0.0",
+  "description": "Gamified Interactive Portfolio & Resume for Kushal Tiwari - Fullstack Developer & AI Engineer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "game",
+    "rpg",
+    "developer-portfolio",
+    "kushal-tiwari",
+    "react",
+    "gamification"
+  ],
+  "author": "Kushal Tiwari",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

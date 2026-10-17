@@ -1,0 +1,37 @@
+[
+  {
+    "id": "entry-3",
+    "name": "Tech Recruiter",
+    "score": 1420,
+    "comment": "Love this playable portfolio! Solid React and backend engineering skills.",
+    "date": "2026-10-17"
+  },
+  {
+    "id": "entry-1",
+    "name": "Hackathon Judge",
+    "score": 1280,
+    "comment": "Impressive real-time sensor processing and Gemini API integration!",
+    "date": "2026-10-15"
+  },
+  {
+    "id": "entry-1792266763945",
+    "name": "Visitor",
+    "score": 1230,
+    "comment": "Bug Hunter Champion!",
+    "date": "2026-10-17"
+  },
+  {
+    "id": "entry-2",
+    "name": "NIT Manipur Peer",
+    "score": 950,
+    "comment": "Great work organizing RE GEN 2.0 hackathon!",
+    "date": "2026-10-16"
+  },
+  {
+    "id": "entry-1792266673823",
+    "name": "Visitor",
+    "score": 290,
+    "comment": "Bug Hunter Champion!",
+    "date": "2026-10-17"
+  }
+]

@@ -1,0 +1,181 @@
+{
+  "basics": {
+    "name": "Kushal Tiwari",
+    "title": "Full-Stack Web Developer & AI Solutions Engineer",
+    "subtitle": "Final-Year B.Tech CSE @ NIT Manipur",
+    "location": "Dausa, Rajasthan, India",
+    "phone": "+91-9256455186",
+    "email": "kushalsharma9414@gmail.com",
+    "github": "https://github.com/kushaltiwari",
+    "linkedin": "https://linkedin.com/in/kushaltiwari",
+    "portfolio": "http://localhost:3000",
+    "summary": "Final-year B.Tech Computer Science student at NIT Manipur with hands-on experience in full-stack web development and AI-driven web applications. Proficient in React.js, backend architecture, database optimization, and algorithmic problem-solving. Adept at building scalable, high-performance systems and integrating modern APIs, eager to leverage strong technical capabilities in a dynamic software engineering environment."
+  },
+  "stats": {
+    "level": 22,
+    "hp": "100/100",
+    "mp": "150/150",
+    "class": "Fullstack AI Sorcerer",
+    "guild": "NIT Manipur",
+    "exp": 8450,
+    "nextLevelExp": 10000,
+    "questsCompleted": 18
+  },
+  "education": [
+    {
+      "institution": "National Institute of Technology, Manipur",
+      "degree": "Bachelor of Technology in Computer Science Engineering",
+      "period": "2023 – 2027",
+      "details": "Focus on Algorithms, Distributed Systems, Software Engineering, and AI integrations."
+    },
+    {
+      "institution": "Sankalp Senior Secondary School, Rajasthan",
+      "degree": "Board of Senior Secondary Education, Rajasthan – Class XII",
+      "period": "2022 – 2023",
+      "details": "Major in Physics, Chemistry, and Mathematics with high academic distinction."
+    },
+    {
+      "institution": "Mahatma Gandhi Govt. Senior Secondary School, Rajasthan",
+      "degree": "Board of Secondary Education, Rajasthan – Class X",
+      "period": "2020 – 2021",
+      "details": "Secondary school graduation with core foundation in Science and Mathematics."
+    }
+  ],
+  "skills": {
+    "languages": [
+      { "name": "Java", "level": 90, "icon": "☕", "tier": "Master" },
+      { "name": "JavaScript", "level": 92, "icon": "⚡", "tier": "Master" },
+      { "name": "Python", "level": 88, "icon": "🐍", "tier": "Expert" },
+      { "name": "C", "level": 80, "icon": "⚙️", "tier": "Proficient" },
+      { "name": "HTML5 & CSS3", "level": 95, "icon": "🎨", "tier": "Master" }
+    ],
+    "frameworks": [
+      { "name": "React.js", "level": 94, "icon": "⚛️", "tier": "Master" },
+      { "name": "Tailwind CSS", "level": 92, "icon": "🌊", "tier": "Master" },
+      { "name": "Bootstrap", "level": 85, "icon": "🅱️", "tier": "Proficient" },
+      { "name": "Recharts", "level": 82, "icon": "📊", "tier": "Proficient" }
+    ],
+    "backendAndDatabases": [
+      { "name": "Node.js & Express", "level": 89, "icon": "🟢", "tier": "Expert" },
+      { "name": "PostgreSQL", "level": 86, "icon": "🐘", "tier": "Expert" },
+      { "name": "SQL", "level": 90, "icon": "🗄️", "tier": "Master" },
+      { "name": "MongoDB", "level": 84, "icon": "🍃", "tier": "Proficient" },
+      { "name": "Oracle", "level": 78, "icon": "🏛️", "tier": "Proficient" }
+    ],
+    "aiAndTools": [
+      { "name": "GenAI (Google Gemini 2.5)", "level": 92, "icon": "✨", "tier": "Master" },
+      { "name": "REST / Web APIs", "level": 95, "icon": "🔌", "tier": "Master" },
+      { "name": "Git & GitHub", "level": 90, "icon": "🐙", "tier": "Master" },
+      { "name": "Linux (Ubuntu)", "level": 85, "icon": "🐧", "tier": "Expert" },
+      { "name": "VS Code", "level": 95, "icon": "💻", "tier": "Master" }
+    ],
+    "csFundamentals": [
+      "Data Structures & Algorithms (Java)",
+      "Object-Oriented Programming (OOPS)",
+      "Computer Networks",
+      "Operating Systems"
+    ],
+    "softSkills": [
+      "Leadership",
+      "Algorithmic Problem Solving",
+      "Adaptability",
+      "Time Management",
+      "Team Collaboration"
+    ]
+  },
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Software Development Engineer Intern",
+      "company": "Khatakhat Logistics Pvt. Ltd.",
+      "type": "Hybrid",
+      "period": "May 2026 – June 2026",
+      "highlights": [
+        "Built responsive, user-friendly UI components using React.js for internal logistics and management tools.",
+        "Quickly onboarded onto company-specific logistics systems, demonstrating strong adaptability and technical acumen.",
+        "Collaborated with a 5-member engineering team to successfully deliver assigned software features on schedule."
+      ],
+      "questTitle": "The Logistics Overhaul",
+      "reward": "+1200 EXP | Code Navigator Crest"
+    },
+    {
+      "id": "exp-2",
+      "role": "Web Development Intern",
+      "company": "Learntricks",
+      "type": "Remote",
+      "period": "May 2025 – June 2025",
+      "highlights": [
+        "Built 3 responsive web applications using HTML and modern CSS, improving page load performance by 30%.",
+        "Collaborated with a cross-functional team of 8 to deliver project features on time and strictly to specification.",
+        "Designed responsive, modern web interfaces using Tailwind CSS to streamline workflows and eliminate custom CSS clutter."
+      ],
+      "questTitle": "The High-Velocity Web Forge",
+      "reward": "+950 EXP | Tailwind Alchemist Badge"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-har",
+      "name": "HAR: Real-Time Human Activity Recognition Engine",
+      "badge": "AI & Telemetry Engine",
+      "tech": ["React.js", "Tailwind CSS", "Google Gemini 2.5 API", "Web APIs", "DeviceMotion API"],
+      "liveDemo": "https://har-activity-recognition.demo.app",
+      "github": "https://github.com/kushaltiwari/HAR-Human-Activity-Recognition",
+      "featured": true,
+      "description": "An intelligent web application utilizing the browser's DeviceMotion API and a sliding-window data structure to process multi-axis smartphone sensor telemetry (accelerometer & gyroscope) in real-time at 20Hz.",
+      "points": [
+        "Engineered a web application utilizing the browser's DeviceMotion API and a sliding-window data structure to process multi-axis smartphone sensor telemetry (accelerometer and gyroscope) in real-time at 20Hz.",
+        "Integrated Google Gemini 2.5 Flash LLM using structured JSON schemas and prompt engineering, applying historical state context to accurately classify user physical activities with high temporal stability."
+      ],
+      "interactivePreview": "sensorSimulator"
+    },
+    {
+      "id": "proj-ollama",
+      "name": "Ollama Answer Script",
+      "badge": "OCR & AI Grader",
+      "tech": ["Python", "React.js", "JavaScript", "Tailwind CSS", "Ollama LLM", "Vision/OCR"],
+      "liveDemo": "https://ollama-answer-script.demo.app",
+      "github": "https://github.com/kushaltiwari/Ollama-Answer-Script",
+      "featured": true,
+      "description": "An AI-powered academic assessment system that extracts and converts handwritten text from scanned PDFs or images into clean, machine-readable digital text with instant criterion-based feedback.",
+      "points": [
+        "Extracts and converts handwritten text from scanned PDFs or images into clean, machine-readable digital text.",
+        "Generates instant marks, criterion-based feedback, and detailed performance summaries."
+      ],
+      "interactivePreview": "ocrSimulator"
+    }
+  ],
+  "positionsOfResponsibility": [
+    {
+      "role": "Organizing Committee Member",
+      "event": "RE GEN '25 & RE GEN 2.0 Hackathons",
+      "organization": "NIT Manipur",
+      "points": [
+        "Coordinated logistics, volunteer teams, and communication for two national-level hackathons (200+ participants each).",
+        "Ensured smooth execution of all event phases, receiving highly positive participant and faculty feedback."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "CDAC Open Source Certification",
+      "desc": "Certificate of Participation – CDAC Open Source Software Development Program.",
+      "icon": "📜"
+    },
+    {
+      "title": "RE GEN '25 Hackathon Lead",
+      "desc": "Certificate of Participation – RE GEN '25 Hackathon Organizing Committee, NIT Manipur.",
+      "icon": "⚡"
+    },
+    {
+      "title": "RE GEN 2.0 Hackathon Lead",
+      "desc": "Certificate of Participation – RE GEN 2.0 Hackathon Organizing Committee, NIT Manipur.",
+      "icon": "🎯"
+    },
+    {
+      "title": "Consistent High-Impact Delivery",
+      "desc": "Consistently delivered multiple collaborative academic and full-stack development projects on tight deadlines.",
+      "icon": "⭐"
+    }
+  ]
+}
