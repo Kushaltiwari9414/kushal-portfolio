@@ -171,7 +171,8 @@ class GameEngine {
     // 4. Draw Player
     this.player.draw(this.ctx, this.camera);
 
-    // 5. Draw Mini-Map Radar in top-right or overlay HUD
+    // 5. Draw Mini-Map Radar in bottom-right corner
+    this.map.drawMiniMap(this.ctx, this.camera, this.player);
   }
 
   start() {
