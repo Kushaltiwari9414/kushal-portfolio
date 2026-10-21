@@ -156,6 +156,20 @@ class GameMap {
     }));
 
     this.interactables.push(new InteractableObject({
+      id: 'obj-proj-vidyut', name: 'VidyutXpress Console', x: 1070, y: 770,
+      category: 'project', icon: '⚡', color: '#f59e0b',
+      title: 'VidyutXpress Electrical Portal', subtitle: 'React.js, Node.js, Netlify Live App',
+      data: { type: 'project', project: this.resume.projects[2] }
+    }));
+
+    this.interactables.push(new InteractableObject({
+      id: 'obj-proj-talentflow', name: 'TalentFlow Terminal', x: 1280, y: 770,
+      category: 'project', icon: '💼', color: '#a855f7',
+      title: 'TalentFlow AI Hiring Platform', subtitle: 'React.js, Tailwind CSS, Vercel Live App',
+      data: { type: 'project', project: this.resume.projects[3] }
+    }));
+
+    this.interactables.push(new InteractableObject({
       id: 'obj-arcade-game', name: 'Bug Hunter Arcade', x: 1390, y: 650,
       category: 'arcade', icon: '👾', color: '#f43f5e',
       title: 'Bug Hunter: Algo Runner Mini-Game', subtitle: 'Catch Algorithms, Dodge Bugs, Submit High Score!',

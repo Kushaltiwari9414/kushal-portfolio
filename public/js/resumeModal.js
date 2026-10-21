@@ -311,13 +311,25 @@ class ModalManager {
           </div>
 
           <!-- Project Links -->
-          <div class="flex flex-wrap gap-3 mt-5">
-            <a href="${proj.liveDemo}" target="_blank" class="flex-1 min-w-[150px] text-center px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg shadow-lg shadow-emerald-600/30 transition flex items-center justify-center gap-2 text-sm">
-              <span>🚀</span> Launch Live Demo
-            </a>
-            <a href="${proj.github}" target="_blank" class="flex-1 min-w-[150px] text-center px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-lg border border-slate-700 transition flex items-center justify-center gap-2 text-sm">
-              <span>🐙</span> View GitHub Code
-            </a>
+          <div class="mt-5 p-4 bg-slate-950/80 rounded-xl border border-slate-800 space-y-3">
+            <h4 class="text-xs font-bold text-sky-400 uppercase tracking-wider">🔗 Project Access & Source Links</h4>
+            <div class="flex flex-wrap gap-3">
+              ${proj.liveDemo ? `
+                <a href="${proj.liveDemo}" target="_blank" rel="noopener noreferrer" class="flex-1 min-w-[160px] text-center px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg shadow-lg shadow-emerald-600/30 transition flex items-center justify-center gap-2 text-sm">
+                  <span>🚀</span> Open Live Project ↗
+                </a>
+              ` : ''}
+              ${proj.github ? `
+                <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="flex-1 min-w-[160px] text-center px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-lg border border-slate-700 transition flex items-center justify-center gap-2 text-sm">
+                  <span>🐙</span> View Source Code ↗
+                </a>
+              ` : ''}
+            </div>
+            ${proj.liveDemo ? `
+              <p class="text-[11px] text-slate-400 font-mono break-all">
+                Direct URL: <a href="${proj.liveDemo}" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline">${proj.liveDemo}</a>
+              </p>
+            ` : ''}
           </div>
         </div>
       </div>
@@ -724,12 +736,16 @@ class ModalManager {
         </div>
 
         <!-- Projects -->
-        <div class="space-y-2.5">
+        <div class="space-y-3">
           <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-0.5">Projects</h2>
           ${this.resume.projects.map(proj => `
             <div class="space-y-1 text-xs">
-              <div class="flex justify-between items-baseline">
-                <span class="font-bold text-slate-900">${proj.name}</span>
+              <div class="flex justify-between items-baseline flex-wrap gap-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="font-bold text-slate-900">${proj.name}</span>
+                  ${proj.liveDemo ? `<a href="${proj.liveDemo}" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-semibold text-[10px]">🔗 Live Demo ↗</a>` : ''}
+                  ${proj.github ? `<a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline font-semibold text-[10px]">🐙 GitHub ↗</a>` : ''}
+                </div>
                 <span class="text-slate-600 italic text-[11px]">${proj.tech.join(', ')}</span>
               </div>
               <ul class="list-disc list-inside text-slate-700 space-y-0.5 text-[11px]">

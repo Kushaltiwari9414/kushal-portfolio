@@ -248,8 +248,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         location: "Dausa, Rajasthan | NIT Manipur",
         phone: "+91-9256455186",
         email: "kushalsharma9414@gmail.com",
-        github: "https://github.com/kushaltiwari",
+        github: "https://github.com/Kushaltiwari9414",
         linkedin: "https://linkedin.com/in/kushaltiwari",
+        portfolio: "https://kushal-portfolio-drab.vercel.app",
         summary: "Final-year B.Tech Computer Science student at NIT Manipur with hands-on experience in full-stack web development and AI-driven web applications."
       },
       stats: { level: 22, exp: 8450 },

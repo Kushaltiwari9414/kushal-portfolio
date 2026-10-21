@@ -6,9 +6,9 @@
     "location": "Dausa, Rajasthan, India",
     "phone": "+91-9256455186",
     "email": "kushalsharma9414@gmail.com",
-    "github": "https://github.com/kushaltiwari",
+    "github": "https://github.com/Kushaltiwari9414",
     "linkedin": "https://linkedin.com/in/kushaltiwari",
-    "portfolio": "http://localhost:3000",
+    "portfolio": "https://kushal-portfolio-drab.vercel.app",
     "summary": "Final-year B.Tech Computer Science student at NIT Manipur with hands-on experience in full-stack web development and AI-driven web applications. Proficient in React.js, backend architecture, database optimization, and algorithmic problem-solving. Adept at building scalable, high-performance systems and integrating modern APIs, eager to leverage strong technical capabilities in a dynamic software engineering environment."
   },
   "stats": {
@@ -119,8 +119,8 @@
       "name": "HAR: Real-Time Human Activity Recognition Engine",
       "badge": "AI & Telemetry Engine",
       "tech": ["React.js", "Tailwind CSS", "Google Gemini 2.5 API", "Web APIs", "DeviceMotion API"],
-      "liveDemo": "https://har-activity-recognition.demo.app",
-      "github": "https://github.com/kushaltiwari/HAR-Human-Activity-Recognition",
+      "liveDemo": "https://har-mv2w.onrender.com/",
+      "github": "https://github.com/Kushaltiwari9414/HAR",
       "featured": true,
       "description": "An intelligent web application utilizing the browser's DeviceMotion API and a sliding-window data structure to process multi-axis smartphone sensor telemetry (accelerometer & gyroscope) in real-time at 20Hz.",
       "points": [
@@ -131,11 +131,11 @@
     },
     {
       "id": "proj-ollama",
-      "name": "Ollama Answer Script",
+      "name": "Ollama Answer Script Evaluator",
       "badge": "OCR & AI Grader",
       "tech": ["Python", "React.js", "JavaScript", "Tailwind CSS", "Ollama LLM", "Vision/OCR"],
-      "liveDemo": "https://ollama-answer-script.demo.app",
-      "github": "https://github.com/kushaltiwari/Ollama-Answer-Script",
+      "liveDemo": "https://ollama-answer-script-evaluation-mas.vercel.app",
+      "github": "https://github.com/Kushaltiwari9414/ollama_answer_script_evaluation-master",
       "featured": true,
       "description": "An AI-powered academic assessment system that extracts and converts handwritten text from scanned PDFs or images into clean, machine-readable digital text with instant criterion-based feedback.",
       "points": [
@@ -143,6 +143,47 @@
         "Generates instant marks, criterion-based feedback, and detailed performance summaries."
       ],
       "interactivePreview": "ocrSimulator"
+    },
+    {
+      "id": "proj-vidyut",
+      "name": "VidyutXpress — Electrical Services Portal",
+      "badge": "Full-Stack Web App",
+      "tech": ["JavaScript", "React.js", "Node.js", "Tailwind CSS", "Netlify"],
+      "liveDemo": "https://vidyutxpress.netlify.app/",
+      "github": "https://github.com/Kushaltiwari9414/Vidyut_wala",
+      "featured": true,
+      "description": "Full-featured electrical services and on-demand technician booking web application with intuitive booking flow, responsive UI, and optimized service management.",
+      "points": [
+        "Built a responsive electrical service web application with clean booking flow and service catalog.",
+        "Deployed to Netlify with fast CDN delivery and interactive client-side routing."
+      ]
+    },
+    {
+      "id": "proj-talentflow",
+      "name": "TalentFlow — AI Hiring & Applicant Pipeline",
+      "badge": "HR Tech & SaaS",
+      "tech": ["React.js", "Tailwind CSS", "Vercel", "AI Matching"],
+      "liveDemo": "https://talentflow-master.vercel.app/",
+      "github": "https://github.com/Kushaltiwari9414/talentflow-master",
+      "featured": true,
+      "description": "Streamlined applicant tracking and candidate pipeline platform built with modern React.js and high-performance UI components.",
+      "points": [
+        "Developed interactive talent pipeline with visual stage progression and applicant status tracking.",
+        "Hosted and optimized on Vercel with instant CI/CD deployment."
+      ]
+    },
+    {
+      "id": "proj-ankufind",
+      "name": "ANKU Find — Search & Discovery Platform",
+      "badge": "Web Platform",
+      "tech": ["React.js", "Tailwind CSS", "Vercel"],
+      "liveDemo": "https://anku-find.vercel.app",
+      "github": "https://github.com/Kushaltiwari9414/ANKU-find",
+      "featured": false,
+      "description": "Smart search and discovery platform designed for quick querying and seamless content filtering.",
+      "points": [
+        "Engineered intuitive search interface with real-time filtering and responsive card layout."
+      ]
     }
   ],
   "positionsOfResponsibility": [
