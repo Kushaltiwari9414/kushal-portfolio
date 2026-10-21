@@ -27,16 +27,25 @@ function readJson(filePath, defaultValue = []) {
   }
 }
 
-// Helper to safely write JSON
+// Helper to safely write JSON (graceful fallback on Vercel read-only FS)
 function writeJson(filePath, data) {
   try {
+    if (process.env.VERCEL) {
+      // Vercel has read-only filesystem; writes go to in-memory store
+      memoryStore[filePath] = data;
+      return true;
+    }
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
     return true;
   } catch (err) {
     console.error(`Error writing ${filePath}:`, err);
-    return false;
+    memoryStore[filePath] = data; // fallback to memory
+    return true;
   }
 }
+
+// In-memory fallback store for serverless environments
+const memoryStore = {};
 
 let visitorCount = 42;
 
